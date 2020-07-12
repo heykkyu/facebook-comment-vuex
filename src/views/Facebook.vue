@@ -7,6 +7,11 @@
     <div class="content" v-if="showPage">
       <post-list />
     </div>
+    <img 
+      class="loading"
+      src="~@/assets/loading.gif"
+      v-else
+    >
   </div>
 </template>
 
@@ -20,7 +25,9 @@ export default {
     PostList
   },
   mounted () {
-    this.syncDataToLocal()
+    setTimeout(() => {
+      this.syncDataToLocal()
+    }, 1500)
   },
   computed: {
     showPage () {
@@ -54,6 +61,14 @@ export default {
         right: 10%;
       }
     }
+  }
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    width: 100px;
   }
 }
 </style>
