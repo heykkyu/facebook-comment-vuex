@@ -88,8 +88,10 @@ export default new Vuex.Store({
       Vue.set(state.postList[payload.postId].comments[payload.index], 'add', true)
     },
     syncDataToLocal(state) {
+      state.showPage = false;
       const dataBoolean = JSON.parse(localStorage.getItem('postList'))
       if (dataBoolean == null) {
+        state.postList = state.sample;
         localStorage.setItem('postList', JSON.stringify(
           state.sample
         ));

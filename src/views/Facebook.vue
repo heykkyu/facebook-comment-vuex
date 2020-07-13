@@ -27,7 +27,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.syncDataToLocal()
-    }, 1500)
+    }, 1000)
   },
   computed: {
     showPage () {
