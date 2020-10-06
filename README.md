@@ -1,4 +1,4 @@
-# clo-facebook project
+# facebook clone project
 
 ## About Facebook Clone
 This made with Vue.js, Vuex(a state management pattern + library for Vue. js applications).
